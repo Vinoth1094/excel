@@ -82,7 +82,8 @@ extension StringExt on String {
 }
 
 /// Copying from Flutter Material Color
-class ExcelColor extends Equatable {
+// @Equatable()
+class ExcelColor {
   const ExcelColor._(this._color, [this._name, this._type]);
 
   final String _color;
@@ -890,14 +891,6 @@ class ExcelColor extends Equatable {
 
   static Map<String, ExcelColor> get valuesAsMap =>
       values.asMap().map((_, v) => MapEntry(v.colorHex, v));
-  @override
-  List<Object?> get props => [
-        _name,
-        _color,
-        _type,
-        colorHex,
-        colorInt,
-      ];
 }
 
 enum ColorType {

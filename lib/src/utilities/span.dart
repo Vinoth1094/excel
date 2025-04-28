@@ -1,7 +1,8 @@
 part of excel;
 
 // For Spanning the columns and rows
-class _Span extends Equatable {
+// @Equatable()
+class _Span {
   final int rowSpanStart;
   final int columnSpanStart;
   final int rowSpanEnd;
@@ -21,12 +22,4 @@ class _Span extends Equatable {
         columnSpanStart = start.columnIndex,
         rowSpanEnd = end.rowIndex,
         columnSpanEnd = end.columnIndex;
-
-  @override
-  List<Object?> get props => [
-        rowSpanStart,
-        columnSpanStart,
-        rowSpanEnd,
-        columnSpanEnd,
-      ];
 }

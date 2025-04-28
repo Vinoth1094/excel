@@ -2,7 +2,8 @@ part of excel;
 
 /// Styling class for cells
 // ignore: must_be_immutable
-class CellStyle extends Equatable {
+// @Equatable()
+class CellStyle {
   String _fontColorHex = ExcelColor.black.colorHex;
   String _backgroundColorHex = ExcelColor.none.colorHex;
   String? _fontFamily;
@@ -46,6 +47,7 @@ class CellStyle extends Equatable {
     this.numberFormat = NumFormat.standard_0,
   })  : _textWrapping = textWrapping,
         _bold = bold,
+        _underline = underline,
         _fontSize = fontSize,
         _italic = italic,
         _fontFamily = fontFamily,
@@ -345,28 +347,4 @@ class CellStyle extends Equatable {
   set diagonalBorderDown(bool diagonalBorderDown) {
     _diagonalBorderDown = diagonalBorderDown;
   }
-
-  @override
-  List<Object?> get props => [
-        _bold,
-        _rotation,
-        _italic,
-        _underline,
-        _fontSize,
-        _fontFamily,
-        _fontScheme,
-        _textWrapping,
-        _verticalAlign,
-        _horizontalAlign,
-        _fontColorHex,
-        _backgroundColorHex,
-        _leftBorder,
-        _rightBorder,
-        _topBorder,
-        _bottomBorder,
-        _diagonalBorder,
-        _diagonalBorderUp,
-        _diagonalBorderDown,
-        numberFormat,
-      ];
 }

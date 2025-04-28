@@ -1,6 +1,7 @@
 part of excel;
 
-class CellIndex extends Equatable {
+// @Equatable()
+class CellIndex {
   CellIndex._({required this.columnIndex, required this.rowIndex});
 
   ///
@@ -34,7 +35,4 @@ class CellIndex extends Equatable {
 
   final int rowIndex;
   final int columnIndex;
-
-  @override
-  List<Object?> get props => [rowIndex, columnIndex];
 }

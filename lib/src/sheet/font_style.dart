@@ -2,7 +2,8 @@ part of excel;
 
 /// Styling class for cells
 // ignore: must_be_immutable
-class _FontStyle extends Equatable {
+// @Equatable()
+class _FontStyle {
   ExcelColor? _fontColorHex = ExcelColor.black;
   String? _fontFamily;
   FontScheme _fontScheme = FontScheme.Unset;
@@ -112,14 +113,4 @@ class _FontStyle extends Equatable {
   set isItalic(bool italic) {
     _italic = italic;
   }
-
-  @override
-  List<Object?> get props => [
-        _bold,
-        _italic,
-        _fontSize,
-        _underline,
-        _fontFamily,
-        _fontColorHex,
-      ];
 }

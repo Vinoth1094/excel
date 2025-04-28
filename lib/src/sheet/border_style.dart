@@ -1,6 +1,7 @@
 part of excel;
 
-class Border extends Equatable {
+// @Equatable()
+class Border {
   final BorderStyle? borderStyle;
   final String? borderColorHex;
 
@@ -14,15 +15,10 @@ class Border extends Equatable {
   String toString() {
     return 'Border(borderStyle: $borderStyle, borderColorHex: $borderColorHex)';
   }
-
-  @override
-  List<Object?> get props => [
-        borderStyle,
-        borderColorHex,
-      ];
 }
 
-class _BorderSet extends Equatable {
+// @Equatable()
+class _BorderSet {
   final Border leftBorder;
   final Border rightBorder;
   final Border topBorder;
@@ -60,17 +56,6 @@ class _BorderSet extends Equatable {
       diagonalBorderDown: diagonalBorderDown ?? this.diagonalBorderDown,
     );
   }
-
-  @override
-  List<Object?> get props => [
-        leftBorder,
-        rightBorder,
-        topBorder,
-        bottomBorder,
-        diagonalBorder,
-        diagonalBorderUp,
-        diagonalBorderDown,
-      ];
 }
 
 enum BorderStyle {

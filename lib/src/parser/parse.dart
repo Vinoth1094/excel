@@ -486,6 +486,10 @@ class Parser {
             numberFormat: numFormat,
           );
 
+          if (cellStyle.underline != Underline.None) {
+            print(cellStyle.underline);
+          }
+
           _excel._cellStyleList.add(cellStyle);
         });
       });

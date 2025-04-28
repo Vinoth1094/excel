@@ -1,7 +1,8 @@
 part of excel;
 
 // ignore: must_be_immutable
-class Data extends Equatable {
+// @Equatable()
+class Data {
   CellStyle? _cellStyle;
   CellValue? _value;
   Sheet _sheet;
@@ -96,15 +97,6 @@ class Data extends Equatable {
     _sheet._excel._styleChanges = true;
     _cellStyle = _;
   }
-
-  @override
-  List<Object?> get props => [
-        _value,
-        _columnIndex,
-        _rowIndex,
-        _cellStyle,
-        _sheetName,
-      ];
 }
 
 sealed class CellValue {
